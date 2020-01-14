@@ -1,0 +1,26 @@
+.panel-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 24px 0px 24px;
+    i {
+        cursor: pointer;
+    }
+}
+
+.my-left-body, .my-right-body, .my-top-body, .my-bottom-body, .my-default-body{
+    margin: 24px 24px 24px 24px;
+}
+
+.panel-screen {
+    position: fixed;
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 1500; 
+    cursor: default; 
+}
+

@@ -1,0 +1,68 @@
+<div class="panel-screen" (click)="closeClickHandler()" *ngIf="config.hasOverlay && isVisible">
+</div>
+
+<ng-template #contentTemplate><ng-content></ng-content></ng-template>
+
+<app-panel-top
+    [@slideInOutTop]="isVisible"
+    *ngIf="direction === DIRECTIONS.TOP">
+        <div [ngClass]="'panel-header-container ' + config?.headerContainerClass">
+            <div>
+                <h2>{{panelTitle}}</h2>
+            </div>
+            <div>
+                <i (click)="closeClickHandler()" class="icon-close-bold-sm"></i>
+            </div>
+        </div>
+        <div [ngClass]="config?.bodyContainerClass">
+            <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+        </div>
+</app-panel-top>
+
+<app-panel-right
+    [@slideInOutRight]="isVisible"
+    *ngIf="direction === DIRECTIONS.RIGHT">
+        <div [ngClass]="'panel-header-container ' + config?.headerContainerClass">
+            <div>
+                <h2>{{panelTitle}}</h2>
+            </div>
+            <div>
+                <i (click)="closeClickHandler()" class="icon-close-bold-sm"></i>
+            </div>
+        </div>
+        <div [ngClass]="config?.bodyContainerClass">
+            <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+        </div>
+</app-panel-right>
+
+<app-panel-bottom
+    [@slideInOutBottom]="isVisible"
+    *ngIf="direction === DIRECTIONS.BOTTOM">
+        <div [ngClass]="'panel-header-container ' + config?.headerContainerClass">
+            <div>
+                <h2>{{panelTitle}}</h2>
+            </div>
+            <div>
+                <i (click)="closeClickHandler()" class="icon-close-bold-sm"></i>
+            </div>
+        </div>
+        <div [ngClass]="config?.bodyContainerClass">
+            <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+        </div>
+</app-panel-bottom>
+
+<app-panel-left
+    [@slideInOutLeft]="isVisible"
+    *ngIf="direction === DIRECTIONS.LEFT">
+        <div [ngClass]="'panel-header-container ' + config?.headerContainerClass">
+            <div>
+                <h3 class="pb-4">{{panelTitle}}</h3>
+            </div>
+            <div>
+                <i (click)="closeClickHandler()" class="icon-close-bold-sm"></i>
+            </div>
+        </div>
+        <div [ngClass]="config?.bodyContainerClass">
+            <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+        </div>
+</app-panel-left>
