@@ -1,16 +1,18 @@
 
-          <button class="btn btn-primary" (click)="openDefaultPanel($event)">Open Panel</button>
+         <div class="wrapper">
+          <button class="btn" (click)="openDefaultPanel($event)">Open Default</button>
+          <button class="btn" (click)="openTopPanel()">Panel Top</button>
+          <button class="btn" (click)="openRightPanel()">Panel Right</button>
+          <button class="btn" (click)="openBottomPanel()">Panel Bottom</button>
+          <button class="btn" (click)="openLeftPanel()">Panel Left</button>
+          
           <app-panel
               [config]="defaultPanelConfig"
               [panelTitle]="'Default Panel'"
               (onPanelClose)="onDeafultPanelClose($event)"
               [isVisible]="isDefaultPanelVisible">
-
-            <p>You'll get Right Panel by Default</p>
-
+            <p>Hi, I'm a Default Panel.</p>
           </app-panel>
-
-          <button class="btn btn-primary" (click)="openTopPanel()">Panel Top</button>
           <app-panel
               (onPanelClose)="onTopPanelClose($event)"
               [config]="topPanelConfig"
@@ -18,43 +20,30 @@
               [panelTitle]="'Top Panel'"
               [isVisible]="isTopPanelVisible">
 
-              <p>Hi, Top Panel</p>
-
+              <p>Hi, I'm a Top Panel.</p>
           </app-panel>
-
-          <button class="btn btn-primary" (click)="openRightPanel()">Panel Right</button>
           <app-panel
               (onPanelClose)="onRightPanelClose($event)"
               [config]="rightPanelConfig"
               [direction]="DIRECTIONS.RIGHT"
               [panelTitle]="'Right Panel'"
               [isVisible]="isRightPanelVisible">
-
-              <p>Hi, Right Panel</p>
-
+              <p>Hi, I'm a Right Panel.</p>
           </app-panel>
-
-          <button class="btn btn-primary" (click)="openBottomPanel()">Panel Bottom</button>
           <app-panel
               (onPanelClose)="onBottomPanelClose($event)"
               [config]="bottomPanelConfig"
               [direction]="DIRECTIONS.BOTTOM"
               [panelTitle]="'Bottom Panel'"
               [isVisible]="isBottomPanelVisible">
-
-              <p>Hi, Bottom Panel</p>
-
+              <p>Hi, I'm a Bottom Panel.</p>
           </app-panel>
-
-          <button class="btn btn-primary" (click)="openLeftPanel()">Panel Left</button>
           <app-panel
               (onPanelClose)="onLeftPanelClose($event)"
               [config]="leftPanelConfig"
               [direction]="DIRECTIONS.LEFT"
               [panelTitle]="'Left Panel'"
               [isVisible]="isLeftPanelVisible">
-
-              <p>Hi, Left Panel</p>
-
+              <p>Hi, I'm a Left Panel.</p>
           </app-panel>
 
