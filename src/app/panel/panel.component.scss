@@ -1,9 +1,11 @@
 .panel-header-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 24px 24px 0px 24px;
     i {
         cursor: pointer;
+        font-size: 2rem;
     }
 }
 
